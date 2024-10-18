@@ -10,13 +10,15 @@ btnTambah.onclick = (e) => {
    }
    let task = document.createElement("div");
    task.id = `${Date.now()}`;
-   task.className = `...`;
+   task.className = `flex justify-between items-center bg-blue-200 shadow-md p-4 rounded-md`;
    task.innerHTML = `
-         <p class="...">${title}</p>
+         <p class="text-gray-700">${title}</p>
+         <div class="space-x-0">
          <input type="button" id="btn-selesai" value="SELESAI" data-task="${task.id}"
-                class="...">
+                class="bg-green-100 hover:bg-green-300 text white px-4 py-2 rounded-md cursor-pointer">
          <input type="button" id="btn-hapus" value="HAPUS" data-task="${task.id}"
-                class="...">
+                class="bg-purple-400 hover:bg-purple-600 text-white px-4 py-2 rounded-md cursor-pointer">
+      </div>
    `;
    output.appendChild(task);
    input.value = "";
